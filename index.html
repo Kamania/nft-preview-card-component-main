@@ -1,33 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        :root {
+            --soft-blue: hsl(215, 51%, 70%);
+            --cyan: hsl(178, 100%, 50%);
+            --bg-main: hsl(217, 54%, 11%);
+            --bg-card: hsl(216, 50%, 16%);
+            --line: hsl(215, 32%, 27%);
+            --white: hsl(0, 0%, 100%);
+        }
+
+        html, body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--soft-blue);
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            background-color: var(--bg-card);
+            margin: auto;
+            text-align: justify;
+            border-radius: 5%;
+            max-width: 300px;
+            box-shadow: -20px 20px 28px -4px rgba(0,0,0,0.75);
+        }
+
+        .wrapper:first-child {
+            font-weight: 600;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .equilibrium {
+            border-radius: 5%;
+        }
+
+        .description{
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .description > h2:hover, .username:hover{
+            color: var(--cyan);
+        }
+
+        .description > p{
+            line-height: 1.5em;
+            font-weight: 300;
+        }
+
+        .values{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .eth-value, .time-value{
+            padding: 1em 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            font-weight: 300;
+        }
+
+        .eth-value{
+            font-weight: 400;
+            color: var(--cyan);
+        }
+
+        h2,.username {
+            color: var(--white);
+        }
+
+        footer{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 1em;
+            font-weight: 300;
+        }
+
+        .profile{
+            border: 1px solid var(--white);
+            border-radius: 50%;
+        }
+
+        /*.attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }*/
+    </style>
 </head>
 <body>
 
-  Equilibrium #3429
+<div class="wrapper">
 
-  Our Equilibrium collection promotes balance and calm.
+    <img alt="image equilibrium" class="equilibrium" height="302" src="images/image-equilibrium.jpg" width="302">
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <section class="description">
+        <h2>Equilibrium #3429</h2>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+        <div class="values">
+            <div class="eth-value">
+                <img alt="ethereum icon" src="images/icon-ethereum.svg">
+                <span>0.041 ETH</span>
+            </div>
+            <div class="time-value">
+                <img src="images/icon-clock.svg" alt="clock icon">
+                <span>3 days left</span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <img class="profile" width="30" height="30" alt="image avatar" src="images/image-avatar.png">
+        <p>Creation of <span class="username">Jules Wyvern</span></p>
+    </footer>
+</div>
+
+<!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Joseph Chiira</a>.
+</div>-->
 </body>
 </html>
