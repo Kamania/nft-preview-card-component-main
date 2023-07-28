@@ -51,6 +51,34 @@
 
         .equilibrium {
             border-radius: 5%;
+            opacity: 1;
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .eye-icon{
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -280%);
+            -ms-transform: translate(-50%, -300%);
+        }
+
+        .hero-img:hover{
+            background-color: var(--cyan);
+            border-radius: 5%;
+        }
+        .hero-img:hover .equilibrium{
+            opacity: 0.3;
+        }
+
+        .hero-img:hover .eye-icon{
+            opacity: 1;
         }
 
         .description{
@@ -116,8 +144,12 @@
 
 <div class="wrapper">
 
-    <img alt="image equilibrium" class="equilibrium" height="302" src="images/image-equilibrium.jpg" width="302">
-
+    <header class="hero-img">
+        <img alt="image equilibrium" class="equilibrium" height="302" src="images/image-equilibrium.jpg" width="302">
+        <div class="eye-icon">
+            <img class="eye-icon-img" src="images/icon-view.svg" alt="eye-icon">
+        </div>
+    </header>
 
     <section class="description">
         <h2>Equilibrium #3429</h2>
